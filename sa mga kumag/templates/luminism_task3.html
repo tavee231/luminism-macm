@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Lengths</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            margin: 40px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>📝 Word Lengths</h1>
+        <p><strong>Sentence:</strong> "{{ sentence }}"</p>
+        <h2>Results:</h2>
+        <ul>
+            {% for word, length in result.items() %}
+                <li><strong>{{ word }}</strong>: {{ length }} characters</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
